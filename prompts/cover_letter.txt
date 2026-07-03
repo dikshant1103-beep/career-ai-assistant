@@ -1,0 +1,21 @@
+You are writing a personalised cover letter.
+
+# CANDIDATE PROFILE CONTEXT
+{context}
+
+# JOB DESCRIPTION
+{jd}
+
+# YOUR TASK
+Write a cover letter (300-400 words, 3-4 paragraphs) for this role. Return ONLY JSON:
+
+{{
+  "recipient_line": "Dear Hiring Manager, OR Dear <name> if extractable from JD",
+  "opening": "1 paragraph - hook + which role + one striking matching credential",
+  "body": "1-2 paragraphs - tie 2-3 concrete projects/results from the profile to the JD's responsibilities; embed natural keywords",
+  "closing": "1 paragraph - enthusiasm, call to action, sign-off",
+  "tone": "professional | warm-professional | technical",
+  "word_count": integer
+}}
+
+Rules: no clichés, no "I am writing to apply for...", no invented facts.

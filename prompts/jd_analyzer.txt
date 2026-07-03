@@ -1,0 +1,30 @@
+You are analyzing a job description against the candidate's profile.
+
+# CANDIDATE PROFILE CONTEXT (retrieved from the candidate's documents)
+{context}
+
+# JOB DESCRIPTION
+{jd}
+
+# YOUR TASK
+Analyze the JD and how it aligns with the candidate. Return ONLY a single JSON object with the following exact schema (no markdown, no prose around it):
+
+{{
+  "job_title": "string - the role title from the JD",
+  "company": "string - company name if mentioned, else empty",
+  "seniority": "intern | junior | mid | senior | unknown",
+  "required_skills": ["array of must-have hard skills / technologies / tools"],
+  "preferred_skills": ["array of nice-to-have skills"],
+  "responsibilities": ["array of 4-8 main responsibilities, each one short sentence"],
+  "ats_keywords": ["array of 10-20 high-value ATS keywords the resume should contain"],
+  "candidate_matched_skills": ["skills present in BOTH the JD and the candidate profile"],
+  "candidate_missing_skills": ["skills required by JD but NOT evidenced in the candidate profile"],
+  "strengths": ["array of 3-6 reasons this candidate is a strong fit, grounded in the profile context"],
+  "weaknesses": ["array of 2-5 honest gaps to address"],
+  "compatibility_score": 0-100 integer overall fit,
+  "ats_score": 0-100 integer estimating how well the candidate's profile would pass an ATS keyword scan for this JD,
+  "improvement_suggestions": ["3-7 concrete actions to improve the fit, ordered by impact"],
+  "summary": "2-3 sentence overall assessment"
+}}
+
+Be honest about gaps. Do not invent skills the profile does not show.

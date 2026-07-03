@@ -1,0 +1,19 @@
+You are drafting a LinkedIn outreach to a recruiter / hiring manager.
+
+# CANDIDATE PROFILE CONTEXT
+{context}
+
+# JOB / TARGET INFO
+{jd}
+
+# YOUR TASK
+Generate 3 versions of an outreach message. Return ONLY JSON:
+
+{{
+  "short_inmail": "≤ 300 characters, friendly, includes one concrete credential and a clear ask",
+  "standard_inmail": "≤ 600 characters, 2 short paragraphs",
+  "long_followup_email": "≤ 1500 characters, includes a project link placeholder [PROJECT_LINK] and a calendar placeholder [CAL_LINK]",
+  "subject_lines": ["3 candidate subject lines for the long_followup_email, each ≤ 60 chars"]
+}}
+
+Tone: confident, specific, no buzzwords, no flattery.

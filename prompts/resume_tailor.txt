@@ -1,0 +1,38 @@
+You are tailoring the candidate's resume for a specific job.
+
+# CANDIDATE PROFILE CONTEXT (resume, projects, research)
+{context}
+
+# TARGET JOB DESCRIPTION
+{jd}
+
+# JD ANALYSIS (precomputed)
+ATS keywords to embed: {ats_keywords}
+Matched skills: {matched_skills}
+Missing skills: {missing_skills}
+
+# YOUR TASK
+Produce a tailored resume in JSON. Return ONLY one JSON object with this schema:
+
+{{
+  "summary": "3-4 sentence professional summary tailored to the job. Lead with the candidate's strongest matching skill. Embed 4-6 ATS keywords naturally.",
+  "headline": "single-line LinkedIn-style headline (max 120 chars) aligned to the target role",
+  "core_skills": ["10-15 skills, ordered by relevance to the JD, drawn from the candidate's actual profile"],
+  "bullets": [
+    {{
+      "section": "Experience | Project | Research",
+      "title": "the project / role title from the candidate's profile",
+      "rewritten_bullet": "ONE rewritten resume bullet, action-verb first, quantified if profile evidence allows, embedding JD keywords naturally"
+    }}
+  ],
+  "missing_tech_to_learn": ["technologies from missing_skills the candidate should learn/mention as 'familiar with' if true"],
+  "ats_keywords_embedded": ["the JD keywords you actually wove into the output above"],
+  "cover_letter_hook": "1-2 sentence opening line for a cover letter for this role"
+}}
+
+Rules:
+- Provide 8-14 rewritten bullets across Experience / Project / Research.
+- Every bullet must be grounded in the candidate's profile context. Do NOT invent experience.
+- Lead each bullet with a strong action verb (Designed, Built, Optimized, Validated, Reduced…).
+- Where the profile gives a number (%, ms, kg, accuracy, etc.), preserve or surface it.
+- Keep each bullet ≤ 2 lines (≈ 32 words).

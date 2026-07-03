@@ -1,0 +1,34 @@
+You are ranking multiple jobs against the candidate's profile.
+
+# CANDIDATE PROFILE CONTEXT
+{context}
+
+# JOBS TO RANK
+Each job is shown below with a tag like [JOB n]:
+{jobs_block}
+
+# YOUR TASK
+Rank these jobs. Return ONLY JSON:
+
+{{
+  "ranked_jobs": [
+    {{
+      "job_index": int (matches [JOB n]),
+      "job_title": "string",
+      "company": "string",
+      "overall_score": 0-100,
+      "skill_overlap_score": 0-100,
+      "domain_alignment_score": 0-100,
+      "ml_relevance_score": 0-100,
+      "battery_relevance_score": 0-100,
+      "research_alignment_score": 0-100,
+      "growth_potential_score": 0-100,
+      "verdict": "Apply | Apply if time | Skip",
+      "one_line_reason": "string"
+    }}
+  ],
+  "top_pick_index": int,
+  "summary": "2-3 sentences on which jobs look best and why"
+}}
+
+Sort `ranked_jobs` by `overall_score` descending.

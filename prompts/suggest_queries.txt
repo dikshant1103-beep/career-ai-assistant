@@ -1,0 +1,27 @@
+You are reading the candidate's full profile (resume + thesis + projects + research + LinkedIn) and proposing the highest-yield job-search queries they should run on job boards.
+
+# CANDIDATE PROFILE CONTEXT (retrieved from the candidate's own documents)
+{context}
+
+# YOUR TASK
+Return ONLY JSON, no markdown fences:
+
+{{
+  "queries": [
+    {{
+      "query": "2-5 word search string, e.g. 'battery RUL engineer' or 'vehicle dynamics MBD'",
+      "rationale": "1 sentence on which specific evidence in the profile justifies this query",
+      "suggested_location": "city or country if profile signals it (e.g. 'Bengaluru', 'India'); else empty string",
+      "remote_friendly": true | false
+    }}
+  ],
+  "suggested_role_titles": ["6-10 specific job titles the candidate should look for"],
+  "core_keywords": ["12-20 single technical keywords (skills, tools, methods) for ATS / boolean search"],
+  "summary": "1-2 sentences on the strongest direction the candidate's profile points to"
+}}
+
+Rules:
+- Provide 4-6 queries ordered by strength of evidence in the profile.
+- Prefer specific compound queries ("battery ML engineer") over generic ("software engineer"). Never invent skills.
+- Diversify across the candidate's strongest threads (e.g. battery / vehicle dynamics / ML simulation) — don't return five variations of the same role.
+- "core_keywords" should be the exact tools/methods named in the profile.

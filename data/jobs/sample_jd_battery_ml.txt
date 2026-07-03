@@ -1,0 +1,33 @@
+Job Title: Battery Data & ML Engineer
+Company: VoltCell Energy
+
+About the role
+We are hiring a Battery Data & ML Engineer to build the next generation of
+battery analytics for our electric two-wheeler fleet. You will work on
+state-of-charge (SoC), state-of-health (SoH), and remaining-useful-life
+(RUL) models on data from thousands of vehicles operating in real-world
+conditions.
+
+Responsibilities
+- Design and train ML models for SoC / SoH / RUL on time-series battery telemetry.
+- Build ETL pipelines from telematics into a feature store.
+- Combine physics-based electrochemical models (PyBaMM / SPM) with data-driven
+  approaches for hybrid SoC / RUL estimation.
+- Productionize models for on-device deployment in battery management systems.
+- Collaborate with vehicle dynamics and BMS firmware teams.
+
+Required skills
+- Strong Python (PyTorch, NumPy, scikit-learn).
+- Experience with time-series modelling (LSTM / Transformer / SSM / Mamba).
+- Familiarity with electrochemical models (PyBaMM / DFN / SPM).
+- Strong fundamentals in linear algebra, probability and ODEs.
+- Git, Docker, Linux.
+
+Preferred
+- PINNs / physics-informed ML.
+- C++ for on-device inference (LibTorch).
+- Experience with two-wheeler / EV powertrain data.
+- Publications in battery ML, conference papers welcome.
+
+Location: Hybrid, Bengaluru. Open to recent graduates and final-year
+students with relevant publications or strong projects.

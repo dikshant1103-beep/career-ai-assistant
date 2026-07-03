@@ -1,0 +1,45 @@
+# Secrets
+.env
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Vector store + DB + logs
+embeddings/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# User data (private)
+data/resumes/*
+data/thesis/*
+data/papers/*
+data/linkedin/*
+data/sop/*
+data/jobs/*
+data/uploads/*
+!data/**/.gitkeep
+!data/**/sample_*
+
+# Generated artifacts
+exports/
+*.pdf
+!data/**/sample_*.pdf
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store

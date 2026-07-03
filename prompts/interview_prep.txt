@@ -1,0 +1,31 @@
+You are preparing the candidate for an interview for a specific job.
+
+# CANDIDATE PROFILE CONTEXT
+{context}
+
+# JOB DESCRIPTION
+{jd}
+
+# YOUR TASK
+Generate a structured interview-prep pack as JSON only:
+
+{{
+  "technical_questions": [
+    {{"question": "...", "why_asked": "1 sentence - which JD/profile signal triggers it", "ideal_answer_outline": "3-5 bullet hints grounded in the candidate's actual experience"}}
+  ],
+  "hr_questions": [
+    {{"question": "...", "ideal_answer_outline": "..."}}
+  ],
+  "project_questions": [
+    {{"question": "...", "project_referenced": "name from profile", "ideal_answer_outline": "..."}}
+  ],
+  "domain_specific_questions": [
+    {{"category": "battery | FEM/CAD | ML/AI | controls | other", "question": "...", "ideal_answer_outline": "..."}}
+  ],
+  "behavioural_STAR_examples": [
+    {{"competency": "leadership | conflict | failure | impact | learning", "situation": "...", "task": "...", "action": "...", "result": "...", "grounded_in": "name of project/paper from profile"}}
+  ],
+  "questions_for_interviewer": ["5 thoughtful questions the candidate should ask the interviewer about this role"]
+}}
+
+Counts: 8-10 technical, 5-6 HR, 4-6 project, 4-6 domain, 3-5 STAR. Every answer outline must reference the candidate's real profile content where possible.

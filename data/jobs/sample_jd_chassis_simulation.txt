@@ -1,0 +1,31 @@
+Job Title: Vehicle Dynamics & Simulation Engineer (Two-Wheeler)
+Company: ApexMoto Engineering
+
+Role overview
+You will build and validate the multibody-dynamics (MBD) simulation stack
+that powers our motorcycle chassis development. The role bridges classical
+vehicle dynamics, modern simulation tooling, and product design.
+
+Responsibilities
+- Develop and maintain multibody simulation models (PyChrono / Adams) of
+  motorcycle chassis, suspension and tires.
+- Implement and validate Pacejka Magic Formula tire models including
+  combined slip, Mz, and contact-patch migration.
+- Couple MBD with FEM (ANSYS) for stiffness / NVH workflows.
+- Build CAD-driven parameter sweeps (SolidWorks / NX) and automate them.
+- Correlate simulation results with rig and track data.
+- Mentor junior engineers on chassis fundamentals.
+
+Required
+- Strong vehicle dynamics fundamentals (yaw, roll, gyroscopic effects).
+- Python (NumPy, SciPy) AND C++.
+- Hands-on with PyChrono / Adams / Simpack OR equivalent MBD tool.
+- FEM experience (ANSYS / Abaqus).
+- CAD: SolidWorks or NX.
+
+Preferred
+- Pacejka tire modelling expertise.
+- Custom integrators (Generalized-alpha / RK4) for stiff MBD.
+- ML for surrogate modelling.
+
+Compensation: competitive + equity. Location: Pune, India.
