@@ -17,13 +17,19 @@ projects) in a local vector database and uses **Claude** + **RAG** to:
 Everything runs **locally on Ubuntu/Linux** — only the Claude API call goes
 to the network. Your documents and embeddings stay on your machine.
 
+> Prefer a GUI? [**Career Copilot**](https://github.com/dikshant1103-beep/career-copilot)
+> is an Electron desktop app built on top of this library — drag-and-drop resume
+> upload, parallel job search (Adzuna/Remotive/Greenhouse/Lever), AI ranking,
+> one-click tailored PDFs, and an application tracker.
+
 ---
 
 ## 1. Quickstart (Ubuntu / Linux)
 
 ```bash
-# 1) Clone or copy the project
-cd ~/Desktop/career_ai_assistant
+# 1) Clone the project
+git clone https://github.com/dikshant1103-beep/career-ai-assistant.git
+cd career-ai-assistant
 
 # 2) Create a virtual environment
 python3 -m venv .venv
